@@ -46,6 +46,20 @@ Outputs include trained models, parameters, SHAP values, and evaluation results,
 ## Research Objective
 Our goal is to uncover the genetic and environmental factors contributing to the fever effect in autism. By addressing the data imbalance through strategic downsampling and bootstrapping, we aim to ensure that our findings are both robust and representative.
 
+## Workflow Overview
+
+![Workflow Diagram](/path/to/picture2.png)
+
+*Figure 1: This diagram illustrates the workflow of the gene expression analysis in autistic children. The workflow includes the following steps:*
+
+1. *ASD Patients*: Data is collected from two distinct groups of children, differentiated by their response to fever.
+2. *Datasets*: The analysis uses a gene expression dataset alongside clinical, behavioral, and demographic data.
+3. *Preprocessing*: Data is normalized, and genes with low counts or variance are removed.
+4. *Differential Expression Analysis*: Using limma-EdgeR for identifying differentially expressed genes.
+5. *Under-sampling and Bootstrapping*: To address data imbalance, the majority class is downsampled, and models are bootstrapped 100 times with 5-fold cross-validation.
+6. *Modeling with XGBoost and SHAP*: The XGBoost algorithm is used for modeling, and SHAP is used for interpreting the model's predictions.
+   
+
 ## Contributing
 We welcome contributions. Please fork the repository and submit a pull request with your changes.
 
