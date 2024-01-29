@@ -50,7 +50,7 @@ Our goal is to uncover the genetic and environmental factors contributing to the
 
 ![Workflow Diagram](Picture2.png)
 
-*Figure 1: This diagram illustrates the workflow of the gene expression analysis in autistic children. The workflow includes the following steps:*
+*Figure 1: This diagram illustrates the workflow of the analysis. The workflow includes the following steps:*
 
 1. *ASD Patients*: Data is collected from two distinct groups of children, differentiated by their response to fever.
 2. *Datasets*: The analysis uses a gene expression dataset alongside clinical, behavioral, and demographic data.
