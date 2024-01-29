@@ -1,7 +1,3 @@
-Certainly! I will enhance the `README.md` to emphasize the approach you're taking to address the data imbalance issue through downsampling and bootstrapping. Here's the updated version:
-
----
-
 # Gene Expression Analysis in Autistic Children: Fever Effect
 
 ## Project Overview
