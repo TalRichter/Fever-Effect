@@ -48,7 +48,7 @@ Our goal is to uncover the genetic and environmental factors contributing to the
 
 ## Workflow Overview
 
-![Workflow Diagram](/path/to/picture2.png)
+![Workflow Diagram](Picture2.png)
 
 *Figure 1: This diagram illustrates the workflow of the gene expression analysis in autistic children. The workflow includes the following steps:*
 
