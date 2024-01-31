@@ -28,7 +28,7 @@ Execute the script with command line arguments to specify parameters like featur
 
 Example:
 ```bash
-python your_script_name.py --feature_selection 10,20 --downsampling 5 --top_features 10 --output_directory ./output/ --gene_expression_file ./data/gene_expression.txt --label_file ./data/children_data.csv
+python fevereffect_pipline.py --feature_selection 10,20 --downsampling 5 --top_features 10 --output_directory ./output/ --gene_expression_file ./data/gene_expression.txt --label_file ./data/children_data.csv
 ```
 
 ### Command Line Arguments
