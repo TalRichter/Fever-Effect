@@ -48,7 +48,7 @@ Our goal is to uncover the genetic and environmental factors contributing to the
 
 ## Workflow Overview
 
-![Workflow Diagram](Picture2.png)
+![Workflow Diagram](workflow.png)
 
 *Figure 1: This diagram illustrates the workflow of the analysis. The workflow includes the following steps:*
 
