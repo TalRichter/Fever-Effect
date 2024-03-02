@@ -57,6 +57,11 @@ dds_all <- DESeqDataSetFromTximport(txi_no_outliers,
                                     colData = sampleTable_no_outliers,
                                     design = ~ sex + race + verbal_iq + Target)
 
+# Remove low counts 
+cpm <- cpm(counts(dds_all))
+keep <- rowSums(cpm >= 1) >= 306 #minor group in 306
+dds_all<- dds_all[keep,]
+
 # Run DESeq analysis
 dds_all <- DESeq(dds_all, parallel = FALSE)
 
@@ -93,6 +98,10 @@ txi_gi <- filterTxiForSamples(txi_no_outliers, sampleTable_GI)
 dds_GI <- DESeqDataSetFromTximport(txi_gi,
                                    colData = sampleTable_GI,
                                    design = ~ sex + race + verbal_iq + Target)
+# Remove low counts 
+cpm <- cpm(counts(dds_all))
+keep <- rowSums(cpm >= 1) >= 167 # minor group is 167
+dds_all<- dds_all[keep,]
 
 # Run DESeq analysis for GI samples
 dds_GI <- DESeq(dds_GI, parallel = FALSE)
