@@ -33,9 +33,9 @@ python fevereffect_pipline.py --feature_selection 10,20 --downsampling 5 --top_f
 
 ### Command Line Arguments
 - `-FS`, `--feature_selection`: Options for feature selection (comma-separated).
-- `-DS`, `--downsampling`: Downsampling iterations to balance the dataset.
+- `-DS`, `--downsampling`: Downsampling iterations to balance the dataset. 
 - `-TF`, `--top_features`: Number of top features for analysis.
-- `-OD`, `--output_directory`: Output directory for models and results.
+- `-OD`, `--output_directory`: Output directory for models and results. 
 - `-GE`, `--gene_expression_file`: Gene expression data file.
 - `-LF`, `--label_file`: Label file with additional demographic and biomedical data.
 - `-CVM`, `--cv_method`: Method for cross-validation (grid or random).
@@ -46,19 +46,6 @@ Outputs include trained models, parameters, SHAP values, and evaluation results,
 ## Research Objective
 Our goal is to uncover the genetic and environmental factors contributing to the fever effect in autism. By addressing the data imbalance through strategic downsampling and bootstrapping, we aim to ensure that our findings are both robust and representative.
 
-## Workflow Overview
-
-![Workflow Diagram](workflow.png)
-
-*Figure 1: This diagram illustrates the workflow of the analysis. The workflow includes the following steps:*
-
-1. *ASD Patients*: Data is collected from two distinct groups of children, differentiated by their response to fever.
-2. *Datasets*: The analysis uses a gene expression dataset alongside clinical, behavioral, and demographic data.
-3. *Preprocessing*: Data is normalized, and genes with low counts or variance are removed.
-4. *Differential Expression Analysis*: Using limma-EdgeR for identifying differentially expressed genes.
-5. *Under-sampling and Bootstrapping*: To address data imbalance, the majority class is downsampled, and models are bootstrapped 100 times with 5-fold cross-validation.
-6. *Modeling with XGBoost and SHAP*: The XGBoost algorithm is used for modeling, and SHAP is used for interpreting the model's predictions.
-   
 
 ## Contributing
 We welcome contributions. Please fork the repository and submit a pull request with your changes.
