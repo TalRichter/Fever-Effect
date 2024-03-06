@@ -38,7 +38,7 @@ python fevereffect_pipline.py --feature_selection 10,20 --downsampling 5 --top_f
 - `-OD`, `--output_directory`: Output directory for models and results. 
 - `-GE`, `--gene_expression_file`: Gene expression data file.
 - `-LF`, `--label_file`: Label file with additional demographic and biomedical data.
-- `-CVM`, `--cv_method`: Method for cross-validation (grid or random).
+- `-M`, `--method`: use gridseachCV or randomesearchCV 
 
 ## Output
 Outputs include trained models, parameters, SHAP values, and evaluation results, all stored in the specified output directory.
