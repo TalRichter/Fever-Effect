@@ -1,4 +1,4 @@
-# Gene Expression Analysis in Autistic Children: Fever Effect
+# XGBoost analysis with bootstrap downsampling for imbalanced data and SHAP interpretation 
 
 ## Project overview
 This research project focuses on analyzing gene expression in autistic children, particularly examining the response to fever. We categorize the children into two groups: a "Fever-Affected" group, showing improvement in autistic symptoms with fever (160 children), and a "Non-Fever-Affected" group, showing no response to fever (600 children). Our analysis integrates gene expression data with additional information like age, gender, IQ, and other biomedical data to identify key genes and features associated with the fever response in autism.
