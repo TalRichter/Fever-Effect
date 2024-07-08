@@ -123,8 +123,7 @@ def calculate_mahalanobis_outliers(data, use_pca=True, pca_variance_threshold=0.
         return pd.Series(outliers.astype(int), index=data.index)
     except np.linalg.LinAlgError as e:
         print(f"Linear algebra error during Mahalanobis outlier detection: {e}")
-        return pd.Series([], dtype=int)  # Return an empty Series as a fallbac
-
+        return pd.Series([], dtype=int)  # Return an empty Series as a fallback
 
 
 def identify_and_remove_total_outliers(data, pathways, condition_column='Target'):
@@ -206,7 +205,6 @@ def compare_outlier_proportions(affected_outliers, not_affected_outliers):
     return p_value
 
 
-
 def aggregate_pathways_from_directory(directory_path):
     """
     Aggregates pathways from all GMT files within a directory.
@@ -230,6 +228,8 @@ def perform_analysis_for_dataset(data_path, gmt_folder_path, output_folder_path,
     print(f"Processing dataset: {data_path}")
     data = pd.read_csv(data_path)
     pathways = aggregate_pathways_from_directory(gmt_folder_path)
+
+    print(f"Total pathways after filtering: {len(pathways)}")
 
     cleaned_data = identify_and_remove_total_outliers(data, pathways)
 
@@ -289,6 +289,9 @@ def perform_analysis_for_dataset(data_path, gmt_folder_path, output_folder_path,
         (results_df['P-Adj'] <= 0.05)
         ].sort_values('P-Adj', ascending=True)
 
+    print("Filtered results:")
+    print(filtered_results_df)
+
     base_name = os.path.splitext(os.path.basename(data_path))[0]
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     output_file_name = f"{base_name}_results_{timestamp}.csv"
@@ -313,7 +316,7 @@ def main(dataset_folder_path, gmt_folder_path, output_folder_path, use_pca=True)
     - use_pca: Boolean indicating whether PCA should be used in outlier detection.
     """
     # Define the outlier p-value and PCA variance threshold
-    outlier_p_value = 0.99 # You can change this to the p-value you want to use
+    outlier_p_value = 0.975  # You can change this to the p-value you want to use
     pca_variance_threshold = 0.90  # Set the PCA variance threshold
     data_paths = glob.glob(os.path.join(dataset_folder_path, "*.csv"))
     # Process each data file
@@ -324,7 +327,7 @@ def main(dataset_folder_path, gmt_folder_path, output_folder_path, use_pca=True)
 if __name__ == "__main__":
     dataset_folder_path = r"G:\My Drive\XGBoost_Fever_effect\mahalanobis_distance_analysis_pathways\files\target\iq"
     gmt_folder_path = r"G:\My Drive\XGBoost_Fever_effect\mahalanobis_distance_analysis_pathways\gmt_files\c5\bp"
-    output_folder_path = r"G:\My Drive\XGBoost_Fever_effect\mahalanobis_distance_analysis_pathways\results"
+    output_folder_path = r"G:\My Drive\XGBoost_Fever_effect\mahalanobis_distance_analysis_pathways\results\check"
     use_pca = True  # or False, depending on your choice
 
     main(dataset_folder_path, gmt_folder_path, output_folder_path, use_pca)
