@@ -58,7 +58,7 @@ def find_enriched_clusters_with_gene_names(data_path, output_path, min_clusters=
                     'gene_names': '\t'.join(gene_names_in_cluster)
                 })
 
-    # Adjust p-values for multiple comparisons, if there are any clusters to adjust
+    # Adjust p-values for multiple comparisons
     if enriched_clusters:
         p_values = [cluster['p_value'] for cluster in enriched_clusters]
         adj_p_values = multipletests(p_values, alpha=alpha, method='fdr_bh')[1]
