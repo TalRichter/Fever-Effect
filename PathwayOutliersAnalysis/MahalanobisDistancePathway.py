@@ -325,9 +325,8 @@ def main(dataset_folder_path, gmt_folder_path, output_folder_path, use_pca=True)
 
 
 if __name__ == "__main__":
-    dataset_folder_path = r"G:\My Drive\XGBoost_Fever_effect\mahalanobis_distance_analysis_pathways\files\check"
+    dataset_folder_path = r"G:\My Drive\XGBoost_Fever_effect\mahalanobis_distance_analysis_pathways\files\"
     gmt_folder_path = r"G:\My Drive\XGBoost_Fever_effect\mahalanobis_distance_analysis_pathways\gmt_files\c5\bp"
-    output_folder_path = r"G:\My Drive\XGBoost_Fever_effect\mahalanobis_distance_analysis_pathways\results\check"
-    use_pca = True  # or False, depending on your choice
-
+    output_folder_path = r"G:\My Drive\XGBoost_Fever_effect\mahalanobis_distance_analysis_pathways\results\"
+    use_pca = True 
     main(dataset_folder_path, gmt_folder_path, output_folder_path, use_pca)
