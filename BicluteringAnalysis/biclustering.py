@@ -76,7 +76,6 @@ def find_enriched_clusters_with_gene_names(data_path, output_path, min_clusters=
     print(f"Results saved to: {output_path}")
 
 # Example usage
-# data_path = r"G:\My Drive\XGBoost_Fever_effect\limma_edgeR\new5\LogCounts_CPM_BeforeVoom_Allsamples_Target.csv"
 data_path = r"C:\Users\talri\Documents\fever_effect_paper\counts_LogCPM_GIsamples_Target.csv"
-output_path = "G:/My Drive/XGBoost_Fever_effect/biclustering/enriched_cluster_SpectralBiclustering_maxclustersRandom1.csv"
+output_path = "G:/My Drive/XGBoost_Fever_effect/biclustering/enriched_cluster_SpectralBiclustering.csv"
 find_enriched_clusters_with_gene_names(data_path, output_path, min_clusters=3, max_clusters=20, top_x_clusters=5, min_samples_group_1=40, significant_only=True, alpha=1, max_genes_per_cluster=500)
