@@ -9,7 +9,7 @@
 
 ---
 
-## 🧬 Overview
+## Overview
 
 This repository contains the full pipeline used in our study of the **Fever Effect in Autism Spectrum Disorder (ASD)** — a phenomenon where some autistic individuals show temporary behavioral improvements during febrile episodes.
 
@@ -22,7 +22,7 @@ from the **Simons Simplex Collection (SSC)** to uncover molecular signatures and
 
 ---
 
-## 🔍 Highlights
+## Highlights
 
 - ⚙️ **Interpretable ML Pipeline**  
   Built an XGBoost classifier to predict fever-associated subgroups, with:
@@ -30,18 +30,18 @@ from the **Simons Simplex Collection (SSC)** to uncover molecular signatures and
   - SHAP for model interpretation
   - Feature selection and performance tracking
 
-- 🧪 **Differential Expression Analysis**  
+- **Differential Expression Analysis**  
   Used DESeq2 and edgeR-limma to identify genes linked to fever response.
 
-- 🔎 **Pathway-Based Outlier Detection**  
+- **Pathway-Based Outlier Detection**  
   Detected immune-related transcriptomic outliers using Mahalanobis distance.
 
-- 🔄 **Subgroup Discovery**  
+- **Subgroup Discovery**  
   Applied spectral biclustering to identify ASD subtypes based on expression profiles.
 
 ---
 
-## 📁 Key Folders
+## Key Folders
 
 - [`XGboostAnalysis/`](https://github.com/TalRichter/Fever-Effect/tree/main/XGboostAnalysis) — Full modeling pipeline and tutorial
 - `DE_Analysis/` — DESeq2 and edgeR results
@@ -50,7 +50,7 @@ from the **Simons Simplex Collection (SSC)** to uncover molecular signatures and
 
 ---
 
-## 📘 Publication
+## Publication
 
 This project supports the manuscript:  
 **"Molecular Markers of the Fever Effect in Autism Spectrum Disorder"**  
