@@ -24,7 +24,7 @@ from the **Simons Simplex Collection (SSC)** to uncover molecular signatures and
 
 ## Highlights
 
-- ⚙️ **Interpretable ML Pipeline**  
+- **Interpretable ML Pipeline**  
   Built an XGBoost classifier to predict fever-associated subgroups, with:
   - Bootstrap-based downsampling for imbalanced data
   - SHAP for model interpretation
